@@ -5,9 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-public class Tasklist {
+@Table(name = "tasklist")
+public class Task {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,12 +20,12 @@ public class Tasklist {
 	private String dueDate;
 	boolean complete;
 
-	public Tasklist() {
+	public Task() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Tasklist(Long id, User user, String description, String dueDate, boolean complete) {
+	public Task(Long id, User user, String description, String dueDate, boolean complete) {
 		super();
 		this.id = id;
 		this.user = user;

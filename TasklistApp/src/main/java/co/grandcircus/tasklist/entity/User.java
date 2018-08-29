@@ -17,14 +17,14 @@ public class User {
 	private String emailAddress;
 	private String password;
 	@OneToMany(mappedBy = "user")
-	List<Tasklist> tasks;
+	List<Task> tasks;
 
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long id, String emailAddress, String password, List<Tasklist> tasks) {
+	public User(Long id, String emailAddress, String password, List<Task> tasks) {
 		super();
 		this.id = id;
 		this.emailAddress = emailAddress;
@@ -56,11 +56,11 @@ public class User {
 		this.password = password;
 	}
 
-	public List<Tasklist> getTasks() {
+	public List<Task> getTasks() {
 		return tasks;
 	}
 
-	public void setTasks(List<Tasklist> tasks) {
+	public void setTasks(List<Task> tasks) {
 		this.tasks = tasks;
 	}
 
